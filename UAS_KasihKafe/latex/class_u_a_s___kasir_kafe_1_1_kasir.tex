@@ -1,0 +1,105 @@
+\hypertarget{class_u_a_s___kasir_kafe_1_1_kasir}{}\doxysection{UAS\+\_\+\+Kasir\+Kafe.\+Kasir Class Reference}
+\label{class_u_a_s___kasir_kafe_1_1_kasir}\index{UAS\_KasirKafe.Kasir@{UAS\_KasirKafe.Kasir}}
+
+
+main class  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_u_a_s___kasir_kafe_1_1_kasir_a837c9bc520500491b77207b632da983c}{Kasir\+Kafe}} ()
+\begin{DoxyCompactList}\small\item\em class untuk menampilkan main menu, menerima inputan dari user, dan membuat nota untuk pelanggan \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+main class 
+
+class Kasir dapat menjalankan tugas-\/tugas kasir, seperti menampilkan main menu, menghitung harga barang, dan membuat nota
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_a_s___kasir_kafe_1_1_kasir_a837c9bc520500491b77207b632da983c}\label{class_u_a_s___kasir_kafe_1_1_kasir_a837c9bc520500491b77207b632da983c}} 
+\index{UAS\_KasirKafe.Kasir@{UAS\_KasirKafe.Kasir}!KasirKafe@{KasirKafe}}
+\index{KasirKafe@{KasirKafe}!UAS\_KasirKafe.Kasir@{UAS\_KasirKafe.Kasir}}
+\doxysubsubsection{\texorpdfstring{KasirKafe()}{KasirKafe()}}
+{\footnotesize\ttfamily void UAS\+\_\+\+Kasir\+Kafe.\+Kasir.\+Kasir\+Kafe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+class untuk menampilkan main menu, menerima inputan dari user, dan membuat nota untuk pelanggan 
+
+ketika di run akan menampilkan Menu Makanan dan Minuman
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Console.writeline()\ digunakan\ untuk\ menampilkan\ teks\ dan\ dapat\ menerima\ satu\ atau\ beberapa\ argumen\ teks\ yang\ ingin\ ditampilkan}
+
+\end{DoxyCode}
+ ketika di run, user dapat menginput barang, jika jumlahnya kurang dari 100
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ kondisi\ ini\ berarti\ \textcolor{stringliteral}{'Jumlah'}\ kurang\ dari\ sama\ dengan\ 0\ atau\ lebih\ besar\ dari\ 100,\ }
+\DoxyCodeLine{\ \ \ maka\ program\ akan\ mengulang\ terus-\/menerus\ hingga\ nilai\ variable\ \textcolor{stringliteral}{'Jumlah'}\ berada\ dalam\ rentang\ 1\ hingga\ 100}
+\DoxyCodeLine{\ \ \ \ /code>\ \ \ \ \ \ \ \ \ \ \ */}
+\DoxyCodeLine{\textcolor{keywordflow}{do}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Console.Write(\textcolor{stringliteral}{"{}\(\backslash\)nMasukkan\ Jumlah\ Barang\ :\ "{}});}
+\DoxyCodeLine{\ \ \ \ Jumlah\ =\ \textcolor{keywordtype}{int}.Parse(Console.ReadLine());}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{while}\ (Jumlah\ <=\ 0\ ||\ Jumlah\ >\ 100);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//Mendeklarasikan\ variabel\ data}}
+\DoxyCodeLine{\textcolor{keywordtype}{string}[]\ Nama\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{string}[Jumlah];\ }
+\DoxyCodeLine{\textcolor{keywordtype}{int}[]\ Harga\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[Jumlah];}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ Total\ =\ 0;}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ Bayar,\ Kembalian;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//Menampilkan\ Masukkan\ Nama\ Pelanggan}}
+\DoxyCodeLine{Console.WriteLine(\textcolor{stringliteral}{"{}============================"{}});}
+\DoxyCodeLine{Console.Write(\textcolor{stringliteral}{"{}Masukkan\ Nama\ Pelanggan\ :\ "{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//Deklarasi\ variabel\ data\ string}}
+\DoxyCodeLine{\textcolor{keywordtype}{string}\ NamaPelanggan\ =\ Console.ReadLine();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//Looping\ menggunakan\ kombinasi\ Array}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+
+\end{DoxyCode}
+
+
+ketika di run, akan menampilkan total harganya
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{perulangan\ \textcolor{keywordflow}{for}\ digunakan\ untuk\ menampilkan\ nilai\ dari\ array\ \textcolor{stringliteral}{"{}Nama"{}}\ dan\ \textcolor{stringliteral}{"{}Harga"{}}\ menggunakan\ fungsi\ Console.WriteLine().}
+\DoxyCodeLine{dalam\ perulangan\ ini,\ nilai\ \textcolor{stringliteral}{"{}i"{}}\ akan\ bertambah\ 1\ pada\ setiap\ iterasinya\ sampai\ nilai\ \textcolor{stringliteral}{"{}i"{}}\ mencapai\ \textcolor{stringliteral}{"{}Jumlah"{}}.}
+\DoxyCodeLine{perulangan\ \textcolor{keywordflow}{foreach}\ digunakan\ untuk\ menghitung\ total\ nilai\ dari\ array\ \textcolor{stringliteral}{"{}Harga"{}}.}
+\DoxyCodeLine{dalam\ perulangan\ ini,\ setiap\ nilai\ dari\ array\ \textcolor{stringliteral}{"{}Harga"{}}\ akan\ diakses\ melalui\ variabel\ \textcolor{stringliteral}{"{}i"{}},\ dan\ kemudian\ ditambahkan\ ke\ variabel\ \textcolor{stringliteral}{"{}Total"{}}\ menggunakan\ \textcolor{keyword}{operator}\ +=.}
+
+\end{DoxyCode}
+
+
+Ketika di run, akan menampilkan list pesanan dan harga yang harus dibayarkan, lalu akan diminta untuk memasukkan uang yang telah dibayarkan, setelah itu akan menampilkan uang kembaliannya /example\texorpdfstring{$>$}{>} ~\newline
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Kode\ tersebut\ digunakan\ untuk\ meminta\ input\ dari\ pengguna\ mengenai\ jumlah\ uang\ yang\ dibayarkan\ untuk\ membeli\ barang\ dan\ menampilkan\ kembalian\ uang\ yang\ dibayarkan.}
+\DoxyCodeLine{Perulangan\ \textcolor{keywordflow}{do}-\/\textcolor{keywordflow}{while}\ akan\ terus\ diulang\ sampai\ uang\ yang\ dibayarkan\ cukup\ untuk\ membayar\ seluruh\ total\ belanjaan.}
+
+\end{DoxyCode}
+
+
+ketika di run, akan menampilkan nota pembayaran yang sudah dilakukan
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{kode\ DateTime\ digunakan\ untuk\ menampilkan\ tanggal\ dan\ jam\ sekarang}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_program_8cs}{Program.\+cs}}\end{DoxyCompactItemize}
